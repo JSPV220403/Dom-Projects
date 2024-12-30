@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+<body>
+    <input id="num" type="number">
+    <button onclick="random('num')">Check</button>
+    <h1 id="status"></h1>
+    <h1 id="display"> Youre Score : <span id="score">10</span></h1>
+</body>
+
+<script>
+    function random(num){
+        var rand= Math.floor(Math.random()+1)
+        console.log(rand)
+        if(rand==document.getElementById(num).value){
+            document.getElementById("status").textContent="You are correct"
+        }
+        else{
+            document.getElementById("status").textContent="You are wrong"
+            var score= Number( document.getElementById("score").textContent)
+            console.log(--score)
+            document.getElementById("score").textContent=score
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button to H1</title>
+</head>
+<body>
+    <h1 id="display">Name</h1>
+    <button id="b1" onclick="pass(id)">John</button>
+    <button id="b2" onclick="pass(id)">Hari</button>
+    <button id="b3" onclick="pass(id)">Praveen</button>
+</body>
+
+<script>
+    function pass(id){
+        console.log(id)
+        document.getElementById("display").textContent= document.getElementById(id).textContent
+    }
+</script>
+</html>
